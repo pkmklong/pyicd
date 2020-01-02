@@ -3,20 +3,15 @@
 # http://setuptools.readthedocs.io/en/latest/setuptools.html#configuring-setup-using-setup-cfg-files
 
 [metadata]
-name = pyicd
-description = Add a short description here!
-author = “patrickmlong
-author-email = “patrick.long@gmail.com”
-license = mit
-url = https://pyscaffold.org/
+name = ${project}
+description = ${description}
+author = ${author}
+author-email = ${email}
+license = ${license}
+url = ${url}
 long-description = file: README.rst
 # Change if running only on Windows, Mac or Linux (comma-separated)
 platforms = any
-# Add here all kinds of additional classifiers as defined under
-# https://pypi.python.org/pypi?%3Aaction=list_classifiers
-classifiers =
-    Development Status :: 4 - Beta
-    Programming Language :: Python
 
 [options]
 zip_safe = False
@@ -25,9 +20,7 @@ include_package_data = True
 package_dir =
     =src
 # DON'T CHANGE THE FOLLOWING LINE! IT WILL BE UPDATED BY PYSCAFFOLD!
-setup_requires = pyscaffold>=3.1a0,<3.2a0
-# Add here dependencies of your project (semicolon/line-separated), e.g.
-# install_requires = numpy; scipy
+setup_requires = ${setup_requires_str}
 # The usage of test_requires is discouraged, see `Dependency Management` docs
 # tests_require = pytest; pytest-cov
 # Require a specific Python version, e.g. Python 2.7 or >= 3.4
@@ -40,7 +33,7 @@ exclude =
 
 [options.extras_require]
 # Add here additional requirements for extra features, to install with:
-# `pip install pycr[PDF]` like:
+# `pip install ${project}[PDF]` like:
 # PDF = ReportLab; RXP
 # Add here test requirements (semicolon/line-separated)
 testing =
@@ -50,10 +43,10 @@ testing =
 [options.entry_points]
 # Add here console scripts like:
 # console_scripts =
-#     script_name = pycr.module:function
+#     script_name = ${package}.module:function
 # For example:
 # console_scripts =
-#     fibonacci = pycr.skeleton:run
+#     fibonacci = ${package}.skeleton:run
 # And any other entry points, for example:
 # pyscaffold.cli =
 #     awesome = pyscaffoldext.awesome.extension:AwesomeExtension
@@ -69,7 +62,7 @@ extras = True
 # e.g. --cov-report html (or xml) for html/xml output or --junitxml junit.xml
 # in order to write a coverage file that can be read by Jenkins.
 addopts =
-    --cov pycr --cov-report term-missing
+    --cov ${root_pkg} --cov-report term-missing
     --verbose
 norecursedirs =
     dist
@@ -107,5 +100,3 @@ exclude =
 [pyscaffold]
 # PyScaffold's parameters when the project was created.
 # This will be used when updating. Do not change!
-version = 3.1
-package = pycr
