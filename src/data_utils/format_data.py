@@ -1,7 +1,8 @@
 """
-This script read in  ICD9/10 gems and 
-descriptions files , run basic formatting, 
-and saves the output as csv."
+This module provides functionality to:
+1. read in  ICD9/10 gems and descriptions files
+2. run basic formatting, 
+3. save  the output as csv.
 """
 
 import pandas as pd

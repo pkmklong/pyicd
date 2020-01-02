@@ -1,7 +1,7 @@
 """
-This script retrieves the raw ICD9 and ICD10 GEMs 
-zip files from www.cms.gov and unzips them in a
-target directory.
+This module provides functionality to:
+1. retrieves the raw ICD9 and ICD10 GEMs zip files from www.cms.gov
+2. unzips them in a target directory.
 """
 
 import pandas as pd
