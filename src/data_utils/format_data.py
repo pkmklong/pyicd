@@ -32,14 +32,3 @@ def format_desc(filename: str, codetype: str, separater: str = ","):
     
     save_name = update_file_name(filename)
     df.to_csv(save_name)
-
-
-if __name__=="__main__":
-
-    os.chdir("../data/raw_data/gems/")
-
-    format_icd("2018_I10gem.txt")
-    format_icd("2018_I9gem.txt")
-
-    format_desc("CMS32_DESC_LONG_DX.txt", "icd9", separater = ",")
-    format_desc("icd10cm_codes_2018.txt", "icd10", separater = "//s")

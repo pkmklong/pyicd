@@ -33,16 +33,3 @@ def unzip_dir():
                 zip.extractall(path=".")
             except OSError as e:
                 print(f"file: {f}, error: {e}")
-
-
-if __name__=="__main__":
-
-    os.chdir(SAVE_PATH)
-
-    retrieve_gems_info(URL_GEMS, "icd10_gems.zip")
-
-    retrieve_gems_info(URL_ICD10, "icd10_descriptions.zip")
-
-    retrieve_gems_info(URL_ICD9, "icd9_descriptions.zip")
-
-    unzip_dir()
