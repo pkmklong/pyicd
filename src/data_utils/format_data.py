@@ -11,18 +11,13 @@ import os
 
 def format_icd(filename: str):
     
-    df = pd.read_csv("2018_I10gem.txt", 
+    df = pd.read_csv(filename, 
                      sep="[\s]{1,}",
                      names=["source", "target", "flags"],
                      encoding="latin-1")
     
     save_name = update_file_name(filename)
     df.to_csv(save_name)
-
-
-def update_file_name(filename: str):
-
-    return f"{filename.split('.')[0]}.csv"
 
 
 def format_desc(filename: str, codetype: str, separater: str = ","):
@@ -33,3 +28,8 @@ def format_desc(filename: str, codetype: str, separater: str = ","):
     
     save_name = update_file_name(filename)
     df.to_csv(save_name)
+
+    
+def update_file_name(filename: str):
+
+    return f"{filename.split('.')[0]}.csv"
