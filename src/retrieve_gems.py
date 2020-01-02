@@ -24,7 +24,7 @@ def retrieve_gems_info(url_path: str, file_name: str):
     urllib.request.urlretrieve(url_path, file_name)
 
 
-def unzip_dir(file_path: str):
+def unzip_dir():
 
     for f in os.listdir("."):
        if f.endswith(".zip"):
@@ -45,4 +45,4 @@ if __name__=="__main__":
 
     retrieve_gems_info(URL_ICD9, "icd9_descriptions.zip")
 
-    unzip_dir(SAVE_PATH)
+    unzip_dir()
