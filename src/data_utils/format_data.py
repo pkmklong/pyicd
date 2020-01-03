@@ -15,9 +15,7 @@ def format_icd(filename: str):
                      sep="[\s]{1,}",
                      names=["source", "target", "flags"],
                      encoding="latin-1")
-    
-    save_name = update_file_name(filename)
-    df.to_csv(save_name)
+    return df
 
 
 def format_desc(filename: str, codetype: str, separater: str = ","):
@@ -26,10 +24,19 @@ def format_desc(filename: str, codetype: str, separater: str = ","):
     
     df[[codetype, f"{codetype}_desc"]] = df[codetype].str.split(" ", 1, expand=True)
     
-    save_name = update_file_name(filename)
-    df.to_csv(save_name)
+    return df
 
-    
+
 def update_file_name(filename: str):
 
     return f"{filename.split('.')[0]}.csv"
+
+
+def join_icd_desc(df_icd,df_desc, key: str):
+
+    df = pd.merge(df_icd, df_desc,
+                  left_on = "source",
+                  right_on = key)
+    return df
+
+
