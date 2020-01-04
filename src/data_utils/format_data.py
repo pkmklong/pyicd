@@ -14,7 +14,7 @@ def format_icd(filename: str):
     df = pd.read_csv(filename, 
                      sep="[\s]{1,}",
                      names=["source", "target", "flags"],
-                     encoding="latin-1")
+                     encoding="latin-1", engine="python")
     return df
 
 
