@@ -9,8 +9,7 @@ from data_utils.combine_data import add_icd_desc
 from path_utils.path_variables import PathVariables
 
 
-#if __name__=="__main__":
-def collect_gems_data():
+def retrieve_and_format_gems():
     
     os.chdir(PathVariables.SAVE_PATH)
 
