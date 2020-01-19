@@ -1,4 +1,4 @@
-# icd tools
+# pyicd
 
 <b> Functionality </b>
 
