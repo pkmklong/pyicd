@@ -1,7 +1,7 @@
 import argparse
 from process_data import collect_gems_data
 
-def Main():
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("retrieve_gems_data",
 	help = "Pull 2018 ICD9 and ICD10 GEMs mapping data from cms.gov",
@@ -15,4 +15,4 @@ def Main():
 
 
 if __name__=='__main__':
-    Main()
+    main()
