@@ -18,16 +18,16 @@ def main():
     retrieve_gems_info(PathVariables.URL_GEMS, "icd10_gems.zip")
     retrieve_gems_info(PathVariables.URL_ICD10, "icd10_descriptions.zip")
     retrieve_gems_info(PathVariables.URL_ICD9, "icd9_descriptions.zip")
-
     unzip_dir()
 
-    format_icd("2018_I10gem.txt")
-    format_icd("2018_I9gem.txt")
+    df_icd9 = format_icd("2018_I10gem.txt")
+    df_icd10 =  format_icd("2018_I9gem.txt")
 
-    format_desc("CMS32_DESC_LONG_DX.txt", "icd9", separater = ",")
-    format_desc("icd10cm_codes_2018.txt", "icd10", separater = "//s")
+    df_icd9_desc = format_desc("CMS32_DESC_LONG_DX.txt", "icd9", separater = ",")
+    df_icd10_desc = format_desc("icd10cm_codes_2018.txt", "icd10", separater = "//s")
 
-    add_icd_desc()
+    add_icd_desc(df_icd9, df_icd9_desc,
+                df_icd10, df_icd10_desc)
 
 
 #if __name__=="__main__":

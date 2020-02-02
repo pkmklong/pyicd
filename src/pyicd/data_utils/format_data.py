@@ -22,7 +22,7 @@ def format_desc(filename: str, codetype: str, separater: str = ","):
     
     df = pd.read_csv(filename,names=[codetype], sep = separater, encoding="latin-1")
     
-    df[[codetype, f"{codetype}_desc"]] = df[codetype].str.split(" ", 1, expand=True)
+    df[[codetype, "description"]] = df[codetype].str.split(" ", 1, expand=True)
     
     return df
 
