@@ -29,7 +29,7 @@ From ICD-10-CM to ICD-0-CM aka “backward mapping”
 ```python
 from pyicd import icd10_to_icd9
 
-icd10_to_icd9("A0101")
+icd10_to_icd9("R6521")
 
 source   icd9     description
 R6521   99592   Severe sepsis
