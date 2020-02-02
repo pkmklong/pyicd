@@ -1,17 +1,18 @@
+#!/usr/bin/env python3
+
 import pandas as pd
 import urllib.request
 import zipfile
 import os
 
-from data_utils.retrieve_data import retrieve_gems_info, unzip_dir
-from data_utils.format_data import format_icd, format_desc
-from data_utils.combine_data import add_icd_desc
-from path_utils.path_variables import PathVariables
+from pyicd.data_utils.retrieve_data import retrieve_gems_info, unzip_dir
+from pyicd.data_utils.format_data import format_icd, format_desc
+from pyicd.data_utils.combine_data import add_icd_desc
+from pyicd.path_utils.path_variables import PathVariables
 
 
-#if __name__=="__main__":
-def collect_gems_data():
-    
+def main():
+    print(os.getcwd())
     os.chdir(PathVariables.SAVE_PATH)
 
     retrieve_gems_info(PathVariables.URL_GEMS, "icd10_gems.zip")
@@ -27,3 +28,8 @@ def collect_gems_data():
     format_desc("icd10cm_codes_2018.txt", "icd10", separater = "//s")
 
     add_icd_desc()
+
+
+#if __name__=="__main__":
+main()
+#collect_gems_data()
