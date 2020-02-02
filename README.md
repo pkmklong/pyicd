@@ -1,6 +1,6 @@
 # pyicd (WIP)
 
-Basic functionality:
+## Basic functionality:
 
 - Query individual or batches of ICD9 and ICD10 codesets for validity and clinical descriptions
 - Basic mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
