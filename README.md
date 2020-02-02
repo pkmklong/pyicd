@@ -1,4 +1,5 @@
-## pyicd (WIP)
+# pyicd (WIP)
+A python package for ICD analysis.
 
 ## Basic functionality
 
