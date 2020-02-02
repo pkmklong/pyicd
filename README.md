@@ -7,11 +7,6 @@
 - Search ICD9 or ICD10 codes by keyword and edit distance
 - Basic mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
 
-## Installation options
-```bash
-sudo python3 -m pip install dist/pyicd-1.0dev.tar.gz
-```
-
 ## Examples
 Basic code queries
 
