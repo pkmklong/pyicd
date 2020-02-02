@@ -1,4 +1,4 @@
-# pyicd
+# pyicd (WIP)
 
 Basic functionality:
 
