@@ -18,9 +18,9 @@ icd9_to_icd10("0010")
 |0010  |A000  | Cholera due to Vibrio cholerae 01, biovar cholerae
 
 
-icd10_to_icd9("A000")
+icd10_to_icd9("A0101")
 
 |icd10 |icd9 | description
 |------|-----|-------------------------------
-|A000  |0010 | Cholera due to vibrio cholerae
+|A0101 |0020 | Typhoid fever
 ```
