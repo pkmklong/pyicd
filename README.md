@@ -1,9 +1,8 @@
 # pyicd
 
-## Functionality
-This helper package:
+Basic functionality:
 
-- Querying ICD9 and ICD10 code sets for validity and clinical descriptions
+- Query individual or batches of ICD9 and ICD10 codesets for validity and clinical descriptions
 - Basic mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
 
 
