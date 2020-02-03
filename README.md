@@ -12,7 +12,8 @@ A python package for ICD analysis.
 ## Examples
 <b>GEMS mapping</b>
 
-From ICD-9-CM to ICD-10-CM aka “forward mapping”
+<i>From ICD-9-CM to ICD-10-CM (forward mapping)</i>
+
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
 
@@ -24,7 +25,8 @@ source  icd10                                description
 59972   R3129                OTHER MICROSCOPIC HEMATURIA
 ``` 
 
-From ICD-10-CM to ICD-9-CM aka “backward mapping”
+
+<i>From ICD-10-CM to ICD-9-CM (backward mapping)</i>
 
 ```python
 from pyicd.utils.icd_tools import icd10_to_icd9
@@ -36,7 +38,8 @@ R6521   99592    SEPTIC SHOCK
 R6521   78552   SEVERE SEPSIS
 ```
 
-<b>Find codes by clinical term</b><TO DO>
+
+<b>Search by clinical term</b><TO DO>
   
  ```python
 from pyicd.utils.icd_tools import search_icd10
