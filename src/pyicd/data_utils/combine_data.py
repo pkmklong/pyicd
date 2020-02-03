@@ -28,8 +28,6 @@ def save_icd_desc_tables(df, df_name: str):
 
 def add_icd_desc(df_icd9, df_icd9_desc, df_icd10, df_icd10_desc):
     
-    #df_icd9, df_icd9_desc, df_icd10, df_icd10_desc = read_tables()
-    
     df9_lookup = join_icd_desc(df_icd9,
                         df_icd10_desc,
                         key = "icd10")

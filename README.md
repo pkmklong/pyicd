@@ -1,7 +1,28 @@
-# pyicd
+# pyicd (WIP)
 
-<b> Functionality </b>
+Basic functionality:
 
-* Query ICD-9 or ICD-10 codes for code validity, clinical description, and level of ICD hierarchy.
+- Query individual or batches of ICD9 and ICD10 codesets for validity and clinical descriptions
+- Basic mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
+
+
+## Examples
+
+```python
+from pyicd import icd9_to_icd10, icd10_to_icd9
+
+>> icd9_to_icd10("0010")
+``` 
+|icd9   |icd10  | description
+|:------|:------|:----------------------------------------------------
+|0010   |A000   | Cholera due to Vibrio cholerae 01, biovar cholerae
+
+```python
+>> icd10_to_icd9("A0101")
+```
+
+|icd10  |icd9  | description
+|:------|:-----|:-------------------------------
+|A0101  |0020  | Typhoid fever
 
 
