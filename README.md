@@ -13,6 +13,7 @@ A python package for ICD analysis.
 <b>GEMS mapping</b>
 
 <i>From ICD-9-CM to ICD-10-CM (forward mapping)</i>
+
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
 
@@ -23,6 +24,7 @@ source  icd10                                description
 59972   R3121         ASYMPTOMATIC MICROSCOPIC HEMATURIA
 59972   R3129                OTHER MICROSCOPIC HEMATURIA
 ``` 
+
 
 <i>From ICD-10-CM to ICD-9-CM (backward mapping)</i>
 
@@ -35,6 +37,7 @@ source   icd9     description
 R6521   99592    SEPTIC SHOCK
 R6521   78552   SEVERE SEPSIS
 ```
+
 
 <b>Search by clinical term</b><TO DO>
   
@@ -57,3 +60,4 @@ I4901	       VENTRICULAR FIBRILLATION
 
 ## Notice of Non-Affiliation and Disclaimer 
 The author of this library is not affiliated, associated, authorized, endorsed by, or in any way officially connected with CMS, or any of its subsidiaries or its affiliates.
+
