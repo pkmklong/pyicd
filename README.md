@@ -14,7 +14,7 @@ A python package for ICD analysis.
 
 From ICD-9-CM to ICD-10-CM aka “forward mapping”
 ```python
-from pyicd.icd_utils.icd_tools import icd9_to_icd10
+from pyicd.utils.icd_tools import icd9_to_icd10
 
 icd9_to_icd10("59972")
 
@@ -27,7 +27,7 @@ source  icd10                                description
 From ICD-10-CM to ICD-0-CM aka “backward mapping”
 
 ```python
-from pyicd.icd_utils.icd_tools import icd10_to_icd9
+from pyicd.utils.icd_tools import icd10_to_icd9
 
 icd10_to_icd9("R6521")
 
