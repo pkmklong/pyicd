@@ -24,7 +24,7 @@ source  icd10                                description
 59972   R3129                Other microscopic hematuria
 ``` 
 
-From ICD-10-CM to ICD-0-CM aka “backward mapping”
+From ICD-10-CM to ICD-9-CM aka “backward mapping”
 
 ```python
 from pyicd.utils.icd_tools import icd10_to_icd9
@@ -37,7 +37,7 @@ R6521   78552    Septic shock
 ```
 
 
-<b>Search codes by clinical term</b><TO DO>
+<b>Find codes by clinical term</b><TO DO>
   
  ```python
 from pyicd.utils.icd_tools import search_icd10
