@@ -36,6 +36,20 @@ R6521   99592   Severe sepsis
 R6521   78552    Septic shock
 ```
 
+
+<b>Search codes by clinical term</b><TO DO>
+  
+ ```python
+from pyicd.utils.icd_tools import search_icd10
+
+search_icd10("fibrillation")
+
+icd10	                    description
+I4891	UNSPECIFIED ATRIAL FIBRILLATION
+I4901	       VENTRICULAR FIBRILLATION
+```
+
+
 <b>Batch mapping</b><TO DO>
 
 <b>Check ICD hierarchies</b> <TO DO>
