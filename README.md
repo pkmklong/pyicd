@@ -19,9 +19,9 @@ from pyicd.utils.icd_tools import icd9_to_icd10
 icd9_to_icd10("59972")
 
 source  icd10                                description
-59972    R311     Benign essential microscopic hematuria
-59972   R3121         Asymptomatic microscopic hematuria
-59972   R3129                Other microscopic hematuria
+59972    R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA
+59972   R3121         ASYMPTOMATIC MICROSCOPIC HEMATURIA
+59972   R3129                OTHER MICROSCOPIC HEMATURIA
 ``` 
 
 From ICD-10-CM to ICD-9-CM aka “backward mapping”
@@ -32,10 +32,9 @@ from pyicd.utils.icd_tools import icd10_to_icd9
 icd10_to_icd9("R6521")
 
 source   icd9     description
-R6521   99592   Severe sepsis
-R6521   78552    Septic shock
+R6521   99592    SEPTIC SHOCK
+R6521   78552   SEVERE SEPSIS
 ```
-
 
 <b>Find codes by clinical term</b><TO DO>
   
