@@ -14,27 +14,40 @@ A python package for ICD analysis.
 
 From ICD-9-CM to ICD-10-CM aka “forward mapping”
 ```python
-from pyicd import icd9_to_icd10
+from pyicd.utils.icd_tools import icd9_to_icd10
 
 icd9_to_icd10("59972")
 
 source  icd10                                description
-59972    R311     Benign essential microscopic hematuria
-59972   R3121         Asymptomatic microscopic hematuria
-59972   R3129                Other microscopic hematuria
+59972    R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA
+59972   R3121         ASYMPTOMATIC MICROSCOPIC HEMATURIA
+59972   R3129                OTHER MICROSCOPIC HEMATURIA
 ``` 
 
-From ICD-10-CM to ICD-0-CM aka “backward mapping”
+From ICD-10-CM to ICD-9-CM aka “backward mapping”
 
 ```python
-from pyicd import icd10_to_icd9
+from pyicd.utils.icd_tools import icd10_to_icd9
 
 icd10_to_icd9("R6521")
 
 source   icd9     description
-R6521   99592   Severe sepsis
-R6521   78552    Septic shock
+R6521   99592    SEPTIC SHOCK
+R6521   78552   SEVERE SEPSIS
 ```
+
+<b>Find codes by clinical term</b><TO DO>
+  
+ ```python
+from pyicd.utils.icd_tools import search_icd10
+
+search_icd10("fibrillation")
+
+icd10	                    description
+I4891	UNSPECIFIED ATRIAL FIBRILLATION
+I4901	       VENTRICULAR FIBRILLATION
+```
+
 
 <b>Batch mapping</b><TO DO>
 
