@@ -36,7 +36,7 @@ R6521   99592    SEPTIC SHOCK
 R6521   78552   SEVERE SEPSIS
 ```
 
-<b>Find codes by clinical term</b><TO DO>
+<b>Search by clinical term</b><TO DO>
   
  ```python
 from pyicd.utils.icd_tools import search_icd10
