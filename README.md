@@ -3,9 +3,14 @@ A python package for ICD analysis.
 
 
 ## Basic functionality
-- Basic mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
+- Mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
+
+- Filter GEMS mappings by cross-walk types
+
 - Query individual or batches of ICD9 and ICD10 codesets for validity and clinical descriptions
+
 - Check ICD9 or ICD10 hierarchies 
+
 - Search ICD9 or ICD10 codes by keyword and edit distance
 
 
@@ -17,7 +22,7 @@ A python package for ICD analysis.
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
 
-icd9_to_icd10("59972")
+icd9_to_icd10(icd_code = "59972")
 
 source  icd10                                description
 59972    R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA
@@ -31,7 +36,7 @@ source  icd10                                description
 ```python
 from pyicd.utils.icd_tools import icd10_to_icd9
 
-icd10_to_icd9("R6521")
+icd10_to_icd9(icd_code = "R6521")
 
 source   icd9     description
 R6521   99592    SEPTIC SHOCK
@@ -44,7 +49,7 @@ R6521   78552   SEVERE SEPSIS
  ```python
 from pyicd.utils.icd_tools import search_icd10
 
-search_icd10("fibrillation")
+search_icd10(search_term = "fibrillation")
 
 icd10	                    description
 I4891	UNSPECIFIED ATRIAL FIBRILLATION
@@ -60,4 +65,5 @@ I4901	       VENTRICULAR FIBRILLATION
 
 ## Notice of Non-Affiliation and Disclaimer 
 The author of this library is not affiliated, associated, authorized, endorsed by, or in any way officially connected with CMS, or any of its subsidiaries or its affiliates.
+
 
