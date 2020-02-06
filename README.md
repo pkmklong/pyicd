@@ -22,12 +22,12 @@ A python package for ICD analysis.
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
 
-icd9_to_icd10(icd_code = "59972")
+icd9_to_icd10(icd_code = "59972", map_type = "approximate")
 
-source  icd10                                description
-59972    R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA
-59972   R3121         ASYMPTOMATIC MICROSCOPIC HEMATURIA
-59972   R3129                OTHER MICROSCOPIC HEMATURIA
+source	icd10	  description	                            approximate	no map	combination	scenario	choice list
+59972	  R311	  BENIGN ESSENTIAL MICROSCOPIC HEMATURIA	1	          0	      0          	0        	0
+59972	  R3121 	ASYMPTOMATIC MICROSCOPIC HEMATURIA	    1	          0	      0	          0	        0
+59972	  R3129	  OTHER MICROSCOPIC HEMATURIA	            1	          0	      0	          0	        0
 ``` 
 
 
@@ -38,9 +38,9 @@ from pyicd.utils.icd_tools import icd10_to_icd9
 
 icd10_to_icd9(icd_code = "R6521")
 
-source   icd9     description
-R6521   99592    SEPTIC SHOCK
-R6521   78552   SEVERE SEPSIS
+source	icd9	  description	    approximate	no map	combination	scenario	choice list
+R6521 	99592	  SEVERE SEPSIS	  1	          0	      1	          1	        2
+R6521	  78552 	SEPTIC SHOCK	  1	          0	      1	          1	        1
 ```
 
 
@@ -51,9 +51,9 @@ from pyicd.utils.icd_tools import search_icd10
 
 search_icd10(search_term = "fibrillation")
 
-icd10	                    description
-I4891	UNSPECIFIED ATRIAL FIBRILLATION
-I4901	       VENTRICULAR FIBRILLATION
+source	icd10	  description	                      approximate	no map	combination	scenario	choice list
+42731	  I4891	  UNSPECIFIED  ATRIAL FIBRILLATION	1	          0	      0	          0	        0
+42741 	I4901	  VENTRICULAR FIBRILLATION	        0	          0	      0	          0	        0
 ```
 
 
