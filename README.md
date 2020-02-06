@@ -3,9 +3,14 @@ A python package for ICD analysis.
 
 
 ## Basic functionality
-- Basic mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
+- Mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
+
+- Filter GEMS mappings by cross-walk types
+
 - Query individual or batches of ICD9 and ICD10 codesets for validity and clinical descriptions
+
 - Check ICD9 or ICD10 hierarchies 
+
 - Search ICD9 or ICD10 codes by keyword and edit distance
 
 
