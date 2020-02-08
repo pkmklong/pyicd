@@ -12,7 +12,6 @@ A python package with basic utilities for ICD-9-CM and ICD-10-CM analysis.
 - Explore ICD codes by Word2Vec imbeddings
 
 ## Examples
-<b>GEMs mapping</b>
 
 <i>Forward mapping</i>
 
@@ -27,7 +26,6 @@ source  icd10                                description
 59972  R3129                OTHER MICROSCOPIC HEMATURIA
 ``` 
 
-
 <i>Backward mapping</i>
 
 ```python
@@ -39,7 +37,6 @@ source   icd9    description  approximate  no map  combination    scenario  choi
 R6521  99592  SEVERE SEPSIS            1       0            1           1            2  
 R6521  78552   SEPTIC SHOCK            1       0            1           1            1          
 ```
-
 
 <i>Search by clinical term</i>
   
