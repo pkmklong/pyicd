@@ -10,7 +10,7 @@ setup(name='pyicd',
       ['pyicd',
       'pyicd.path_utils',
       'pyicd.data_utils',
-      'pyicd.gems_utils'],
+      'pyicd.utils'],
       package_dir = {'': 'src'},
       scripts=['src/pyicd/process_data.py']
       #entry_points = {
