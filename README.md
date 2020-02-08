@@ -41,7 +41,7 @@ R6521  78552   SEPTIC SHOCK            1       0            1           1       
 ```
 
 
-<b>Search by clinical term</b>
+<i>Search by clinical term</i>
   
  ```python
 from pyicd.utils.icd_tools import search_icd10
