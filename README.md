@@ -2,17 +2,14 @@
 A python package for ICD analysis.
 
 
-## Basic functionality
-- Mapping of ICD-9 to ICD-10 codes and ICD-10 or ICD-9 codes using GEMS cross-walks
+## Functionality
+<b>Convert between ICD-9-CM and ICD-10-CM using General Equivalency Map (GEMs)</b>
+- Forward and backward ICD mapping
+- Map by GEMs cross-walk flag type
 
-- Filter GEMS mappings by cross-walk types
-
-- Query individual or batches of ICD9 and ICD10 codesets for validity and clinical descriptions
-
-- Check ICD9 or ICD10 hierarchies 
-
-- Search ICD9 or ICD10 codes by keyword and edit distance
-
+<b>Lexical ICD-9-CM and ICD-10-CM querying</b>
+- Search ICD9 or ICD10 codes by clinical keyword 
+- Query ICD codes by Word2Vec imbeddings
 
 ## Examples
 <b>GEMS mapping</b>
@@ -22,7 +19,7 @@ A python package for ICD analysis.
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
 
-icd9_to_icd10(icd_code = "59972", map_type = "approximate")
+icd9_to_icd10(icd_code = "59972", flag = "approximate")
 
 source  icd10                                description  approximate  \
 59972   R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA            1   
