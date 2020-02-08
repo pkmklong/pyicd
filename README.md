@@ -48,9 +48,9 @@ from pyicd.utils.icd_tools import search_icd10
 
 search_icd10(search_term = "fibrillation")
 
-source  icd10                        description
-42731  I4891    UNSPECIFIED ATRIAL FIBRILLATION
-42741  I4901           VENTRICULAR FIBRILLATION
+icd10                        description
+I4891    UNSPECIFIED ATRIAL FIBRILLATION
+I4901           VENTRICULAR FIBRILLATION
 
 ```
 
