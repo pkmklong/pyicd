@@ -5,6 +5,7 @@ setup(name='pyicd',
       version='1.0dev',
       description='Python utilities for ICD code analysis',
       author='Patrick Long',
+      author_email='patrick.long@gmail.com',
       py_modules=['runner'],
       packages=
       ['pyicd',
