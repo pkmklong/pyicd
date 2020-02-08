@@ -12,14 +12,14 @@ A python package with basic utilities for ICD-9-CM and ICD-10-CM analysis.
 
 ## About GEMs
 
-<i><b>GEMs</i></b>:<br>
+<i><b>GEMs</i></b><br>
 General Equivalency Maps (GEMs) support the interoperability between ICD-9 and ICD-10 codebases and are maintained by the Centers for Medicare and Medicaid Services (CMS). Multiple mapping types may occur including one-to-one and one-to-many. CMS provides various flags to further characterize these mapping relationships.<br>
 
-<i><b>Forward mapping</i></b>:<br> Mapping from ICD-9 to ICD-10 codes.<br>
+<i><b>Forward mapping</i></b><br> Mapping from ICD-9 to ICD-10 codes.<br>
 
-<i><b>Backward mapping</i></b>:<br> Mapping from ICD-10 to ICD-9 codes.<br>
+<i><b>Backward mapping</i></b><br> Mapping from ICD-10 to ICD-9 codes.<br>
 
-<i><b>Flags types</i></b>:<br>
+<i><b>Flags types</i></b><br>
 Approximate: Mappings with imperfect correspondence (approximate = 1) or a perfect correspondence (approximate = 0).<br>
 No Map: No acceptable GEMs mapping exisits (no map = 1) or one or greater mappings exist (no map = 0).<br>
 Combination: Mapping is one-to-many (combination = 1) or one-to-one (combination = 0). <br>
