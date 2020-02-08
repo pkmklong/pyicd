@@ -1,5 +1,5 @@
 # pyicd (WIP)
-A python package for ICD analysis.
+A python package with basic utilities for ICD-9-CM and ICD-10-CM analysis.
 
 
 ## Functionality
