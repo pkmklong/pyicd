@@ -24,7 +24,7 @@ Approximate: Mappings with imperfect correspondence (approximate = 1) or a perfe
 No Map: No acceptable GEMs mapping exisits (no map = 1) or one or greater mappings exist (no map = 0).<br>
 Combination: Mapping is one-to-many (combination = 1) or one-to-one (combination = 0). <br>
 Scenario: Multiple target codes are required to complete mapping (scenario = 1) or multiple target codes are not required (scenario = 0)<br>
-Choice lists: Used on conjuction with the combination flag to direct alternatives when mappings are one-to-many relationships. <br>
+Choice list: Used on conjuction with the combination flag to direct alternatives when mappings are one-to-many. If a single combination mapping exists: choice list = 1, if more than one combination mapping exists: choice list = 2, if no combination mapping exists: choice list = 0 <br>
 
 ## Examples
 
