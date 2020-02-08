@@ -9,7 +9,7 @@ A python package for ICD analysis.
 
 <b>Lexical ICD-9-CM and ICD-10-CM querying</b>
 - Search ICD9 or ICD10 codes by clinical keyword 
-- Query ICD codes by Word2Vec imbeddings
+- Explore ICD codes by Word2Vec imbeddings
 
 ## Examples
 <b>GEMS mapping</b>
