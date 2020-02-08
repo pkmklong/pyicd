@@ -2,13 +2,13 @@
 A python package with basic utilities for ICD-9-CM and ICD-10-CM analysis.
 
 
-## Functionality
+## Toolkit
 <b>Convert between ICD-9-CM and ICD-10-CM using General Equivalency Maps (GEMs)</b>
 - Forward and backward ICD mapping
 - Filter by GEMs flag type
 
 <b>Lexical ICD-9-CM and ICD-10-CM querying</b>
-- Search ICD9 or ICD10 codes by clinical keyword 
+- Search ICD-9 or ICD-10 codes by clinical keyword 
 - Explore ICD codes by Word2Vec imbeddings
 
 ## Examples
