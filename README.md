@@ -21,15 +21,10 @@ from pyicd.utils.icd_tools import icd9_to_icd10
 
 icd9_to_icd10(icd_code = "59972", flag = "approximate")
 
-source  icd10                                description  approximate  \
-59972   R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA            1   
-59972  R3121         ASYMPTOMATIC MICROSCOPIC HEMATURIA            1   
-59972  R3129                OTHER MICROSCOPIC HEMATURIA            1   
-
-      no map  combination  scenario  choice list  
-7657       0            0         0            0  
-7658       0            0         0            0  
-7659       0            0         0            0  
+source  icd10                                description
+59972   R311     BENIGN ESSENTIAL MICROSCOPIC HEMATURIA
+59972  R3121         ASYMPTOMATIC MICROSCOPIC HEMATURIA
+59972  R3129                OTHER MICROSCOPIC HEMATURIA
 ``` 
 
 
@@ -38,15 +33,11 @@ source  icd10                                description  approximate  \
 ```python
 from pyicd.utils.icd_tools import icd10_to_icd9
 
-icd10_to_icd9(icd_code = "R6521")
+icd10_to_icd9(icd_code = "R6521", show_flags = True)
 
-source   icd9    description  approximate  no map  combination  \
-R6521  99592  SEVERE SEPSIS            1       0            1   
-R6521  78552   SEPTIC SHOCK            1       0            1   
-
-       scenario  choice list  
-         1            2  
-         1            1  
+source   icd9    description  approximate  no map  combination    scenario  choice list  
+R6521  99592  SEVERE SEPSIS            1       0            1           1            2  
+R6521  78552   SEPTIC SHOCK            1       0            1           1            1          
 ```
 
 
@@ -57,13 +48,10 @@ from pyicd.utils.icd_tools import search_icd10
 
 search_icd10(search_term = "fibrillation")
 
-source  icd10                        description  approximate  no map  \
-42731  I4891    UNSPECIFIED ATRIAL FIBRILLATION            1       0   
-42741  I4901           VENTRICULAR FIBRILLATION            0       0   
+source  icd10                        description
+42731  I4891    UNSPECIFIED ATRIAL FIBRILLATION
+42741  I4901           VENTRICULAR FIBRILLATION
 
-      combination  scenario  choice list  
-            0         0            0  
-            0         0            0  
 ```
 
 
