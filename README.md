@@ -12,9 +12,9 @@ A python package with basic utilities for ICD-9-CM and ICD-10-CM analysis.
 - Explore ICD codes by Word2Vec imbeddings
 
 ## Examples
-<b>GEMS mapping</b>
+<b>GEMs mapping</b>
 
-<i>Forward mapping (from ICD-9-CM to ICD-10-CM)</i>
+<i>Forward mapping</i>
 
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
@@ -28,7 +28,7 @@ source  icd10                                description
 ``` 
 
 
-<i>Backward mapping (from ICD-10-CM to ICD-9-CM)</i>
+<i>Backward mapping</i>
 
 ```python
 from pyicd.utils.icd_tools import icd10_to_icd9
