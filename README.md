@@ -12,19 +12,19 @@ A python package with basic utilities for ICD-9-CM and ICD-10-CM analysis.
 
 ## About GEMs
 
-<i><b>GEMs</i></b><br>
+<b>GEMs</b><br>
 General Equivalency Maps (GEMs) support the interoperability between ICD-9 and ICD-10 codebases and are maintained by the Centers for Medicare and Medicaid Services (CMS). Multiple mapping types may occur including one-to-one and one-to-many. CMS provides various flags to further characterize these mapping relationships.<br>
 
-<i><b>Forward mapping</i></b><br> Mapping from ICD-9 to ICD-10 codes.<br>
+<b>Forward mapping</b><br> Mapping from ICD-9 to ICD-10 codes.<br>
 
-<i><b>Backward mapping</i></b><br> Mapping from ICD-10 to ICD-9 codes.<br>
+<b>Backward mapping</b><br> Mapping from ICD-10 to ICD-9 codes.<br>
 
-<i><b>Flag types</i></b><br>
-Approximate: Mappings with imperfect correspondence (approximate = 1) or a perfect correspondence (approximate = 0).<br>
-No Map: No acceptable GEMs mapping exisits (no map = 1) or one or greater mappings exist (no map = 0).<br>
-Combination: Mapping is one-to-many (combination = 1) or one-to-one (combination = 0). <br>
-Scenario: Multiple target codes are required to complete mapping (scenario = 1) or multiple target codes are not required (scenario = 0)<br>
-Choice list: Used on conjuction with the combination flag to direct alternatives when mappings are one-to-many. If a single combination mapping exists: choice list = 1, if more than one combination mapping exists: choice list = 2, if no combination mapping exists: choice list = 0 <br>
+<b>Flag types</b><br>
+<i>Approximate</i>: Mappings with imperfect correspondence (approximate = 1) or a perfect correspondence (approximate = 0).<br>
+<i>No Map</i>: No acceptable GEMs mapping exisits (no map = 1) or one or greater mappings exist (no map = 0).<br>
+<i>Combination</i>: Mapping is one-to-many (combination = 1) or one-to-one (combination = 0). <br>
+<i>Scenario</i>: Multiple target codes are required to complete mapping (scenario = 1) or multiple target codes are not required (scenario = 0)<br>
+<i>Choice list</i>: Used on conjuction with the combination flag to direct alternatives when mappings are one-to-many. If a single combination mapping exists: choice list = 1, if more than one combination mapping exists: choice list = 2, if no combination mapping exists: choice list = 0 <br>
 
 ## Examples
 
