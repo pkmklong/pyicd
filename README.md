@@ -3,7 +3,7 @@ A python package for ICD analysis.
 
 
 ## Functionality
-<b>Convert between ICD-9-CM and ICD-10-CM using General Equivalency Map (GEMs)</b>
+<b>Convert between ICD-9-CM and ICD-10-CM using General Equivalency Maps (GEMs)</b>
 - Forward and backward ICD mapping
 - Filter by GEMs flag type
 
