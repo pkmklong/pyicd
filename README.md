@@ -14,7 +14,7 @@ A python package for ICD analysis.
 ## Examples
 <b>GEMS mapping</b>
 
-<i>From ICD-9-CM to ICD-10-CM (forward mapping)</i>
+<i>Forward mapping (from ICD-9-CM to ICD-10-CM)</i>
 
 ```python
 from pyicd.utils.icd_tools import icd9_to_icd10
@@ -33,7 +33,7 @@ source  icd10                                description  approximate  \
 ``` 
 
 
-<i>From ICD-10-CM to ICD-9-CM (backward mapping)</i>
+<i>Backward mapping (from ICD-10-CM to ICD-9-CM)</i>
 
 ```python
 from pyicd.utils.icd_tools import icd10_to_icd9
@@ -50,7 +50,7 @@ R6521  78552   SEPTIC SHOCK            1       0            1
 ```
 
 
-<b>Search by clinical term</b><TO DO>
+<b>Search by clinical term</b>
   
  ```python
 from pyicd.utils.icd_tools import search_icd10
@@ -67,9 +67,6 @@ source  icd10                        description  approximate  no map  \
 ```
 
 
-<b>Batch mapping</b><TO DO>
-
-<b>Check ICD hierarchies</b> <TO DO>
 
 
 
