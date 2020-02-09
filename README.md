@@ -13,7 +13,7 @@ A python package with basic utilities for ICD-9-CM and ICD-10-CM codes.
 ## About GEMs
 
 <b>GEMs</b><br>
-General Equivalency Maps (GEMs) support the interoperability between ICD-9 and ICD-10 codebases and are maintained by the Centers for Medicare and Medicaid Services (CMS). Multiple mapping types may occur including one-to-one and one-to-many. CMS provides various flags to further characterize these mapping relationships.<br>
+General Equivalency Maps (GEMs) support the interoperability between ICD-9 and ICD-10 codebases and are maintained by the Centers for Medicare and Medicaid Services (CMS). Multiple mapping types may occur including one-to-one and one-to-many. GEMs provide various flags to further characterize these mapping relationships.<br>
 
 <b>Forward mapping</b><br> Mapping from ICD-9 to ICD-10 codes.<br>
 
