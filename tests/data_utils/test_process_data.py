@@ -11,3 +11,12 @@ from pyicd.data_utils.format_data import split_flags
 def test_split_flags(test_input, expected):
     assert split_flags(test_input) == expected
 
+@pytest.mark.skip()
+def test_format_icd(filename: str):
+    pass
+
+@pytest.mark.skip()
+def test_format_desc(filename: str, codetype: str, separater: str = ","):
+    pass
+
+
