@@ -72,7 +72,7 @@ Search by clinical term::
    :maxdepth: 3
    :caption: Contents:
 
-
+   license
 
 
 
