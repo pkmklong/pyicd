@@ -4,36 +4,129 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Documentation Tutorial: pyicd &#8212; pyicd 0.0.1 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <title>Pyicd documentation &#8212; pyicd 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/language_data.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="search" title="Search" href="search.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">pyicd 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
-  <div class="section" id="documentation-tutorial-pyicd">
-<h1>Documentation Tutorial: pyicd<a class="headerlink" href="#documentation-tutorial-pyicd" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="guide">
-<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="pyicd-documentation">
+<h1>Pyicd documentation<a class="headerlink" href="#pyicd-documentation" title="Permalink to this headline">¶</a></h1>
+<p>A small python utility for basic ICD-9-CM and ICD-10-CM GEMs cross-walking.</p>
+<div class="section" id="about-gems">
+<h2>About GEMs<a class="headerlink" href="#about-gems" title="Permalink to this headline">¶</a></h2>
+<p>General Equivalency Maps (GEMs) support the interoperability between ICD-9 and ICD-10 codebases and are maintained by the Centers for Medicare and Medicaid Services (CMS). Multiple mapping types may occur including one-to-one and one-to-many. GEMs provide various flags to further characterize these mapping relationships.</p>
+<dl class="simple">
+<dt>Convert between ICD-9-CM and ICD-10-CM</dt><dd><ul class="simple">
+<li><p>Forward mapping: ICD-9 to ICD-10 codes.</p></li>
+<li><p>Backward mapping: ICD-10 to ICD-9 codes.</p></li>
+</ul>
+</dd>
+<dt>Filter by map type</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Approximate:</dt><dd><ul>
+<li><p>Imperfect correspondence (approximate = 1)</p></li>
+<li><p>Perfect correspondence (approximate = 0)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>No Map:</dt><dd><ul>
+<li><p>No acceptable GEMs mapping exists (no map = 1)</p></li>
+<li><p>One or greater mappings exist (no map = 0)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Combination:</dt><dd><ul>
+<li><p>Mapping is one-to-many (combination = 1)</p></li>
+<li><p>One-to-one (combination = 0).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Scenario:</dt><dd><ul>
+<li><p>Multiple target codes are required to complete mapping (scenario = 1)</p></li>
+<li><p>Multiple target codes are not required (scenario = 0)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Choice list: Used with the combination flag to direct alternatives when mappings are one-to-many.</dt><dd><ul>
+<li><p>A single combination mapping exists: choice list = 1</p></li>
+<li><p>More than one combination mapping exists: choice list = 2</p></li>
+<li><p>No combination mapping exists: choice list = 0</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pip install git+https://github.com/pkmklong/pyicd.git
+</pre></div>
+</div>
+<p>Forward mapping:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyicd.utils.icd_tools</span> <span class="k">import</span> <span class="n">icd9_to_icd10</span>
+
+<span class="n">icd9_to_icd10</span><span class="p">(</span><span class="n">icd_code</span> <span class="o">=</span> <span class="s2">&quot;59972&quot;</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="s2">&quot;approximate&quot;</span><span class="p">)</span>
+
+<span class="n">source</span>  <span class="n">icd10</span>                                <span class="n">description</span>
+<span class="mi">59972</span>   <span class="n">R311</span>     <span class="n">BENIGN</span> <span class="n">ESSENTIAL</span> <span class="n">MICROSCOPIC</span> <span class="n">HEMATURIA</span>
+<span class="mi">59972</span>  <span class="n">R3121</span>         <span class="n">ASYMPTOMATIC</span> <span class="n">MICROSCOPIC</span> <span class="n">HEMATURIA</span>
+<span class="mi">59972</span>  <span class="n">R3129</span>                <span class="n">OTHER</span> <span class="n">MICROSCOPIC</span> <span class="n">HEMATURIA</span>
+</pre></div>
+</div>
+<p>Backward mapping:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyicd.utils.icd_tools</span> <span class="k">import</span> <span class="n">icd10_to_icd9</span>
+
+<span class="n">icd10_to_icd9</span><span class="p">(</span><span class="n">icd_code</span> <span class="o">=</span> <span class="s2">&quot;R6521&quot;</span><span class="p">,</span> <span class="n">show_flags</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">source</span>   <span class="n">icd9</span>    <span class="n">description</span>  <span class="n">approximate</span>  <span class="n">no</span> <span class="nb">map</span>  <span class="n">combination</span>    <span class="n">scenario</span>  <span class="n">choice</span> <span class="nb">list</span>
+<span class="n">R6521</span>  <span class="mi">99592</span>  <span class="n">SEVERE</span> <span class="n">SEPSIS</span>            <span class="mi">1</span>       <span class="mi">0</span>            <span class="mi">1</span>           <span class="mi">1</span>            <span class="mi">2</span>
+<span class="n">R6521</span>  <span class="mi">78552</span>   <span class="n">SEPTIC</span> <span class="n">SHOCK</span>            <span class="mi">1</span>       <span class="mi">0</span>            <span class="mi">1</span>           <span class="mi">1</span>            <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Search by clinical term:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyicd.utils.icd_tools</span> <span class="k">import</span> <span class="n">search_icd10</span>
+
+<span class="n">search_icd10</span><span class="p">(</span><span class="n">search_term</span> <span class="o">=</span> <span class="s2">&quot;fibrillation&quot;</span><span class="p">)</span>
+
+<span class="n">icd10</span>                        <span class="n">description</span>
+<span class="n">I4891</span>    <span class="n">UNSPECIFIED</span> <span class="n">ATRIAL</span> <span class="n">FIBRILLATION</span>
+<span class="n">I4901</span>           <span class="n">VENTRICULAR</span> <span class="n">FIBRILLATION</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -49,29 +142,27 @@
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">pyicd</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="#">Documentation overview</a><ul>
-  </ul></li>
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pyicd documentation</a><ul>
+<li><a class="reference internal" href="#about-gems">About GEMs</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
-</div>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -82,32 +173,22 @@
     </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2020, Patrick Long.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/index.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">pyicd 0.0.1 documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Patrick Long.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
   </body>
 </html>
