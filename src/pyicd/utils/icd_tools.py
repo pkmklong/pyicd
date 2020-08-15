@@ -11,6 +11,7 @@ def set_map_type(df: "pandas.dataframe", flag: str):
     
     
 def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
+    print(os.getcwd())
 
     df = pd.read_csv(os.path.join(GEMS_PATH, "icd9_gems_lookup.csv"))
     
