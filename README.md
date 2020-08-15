@@ -21,7 +21,7 @@ General Equivalency Maps (GEMs) support the interoperability between ICD-9 and I
 
 <b>Flag types</b><br>
 <i>Approximate</i>: Mappings with imperfect correspondence (approximate = 1) or a perfect correspondence (approximate = 0).<br>
-<i>No Map</i>: No acceptable GEMs mapping exisits (no map = 1) or one or greater mappings exist (no map = 0).<br>
+<i>No Map</i>: No acceptable GEMs mapping exists (no map = 1) or one or greater mappings exist (no map = 0).<br>
 <i>Combination</i>: Mapping is one-to-many (combination = 1) or one-to-one (combination = 0). <br>
 <i>Scenario</i>: Multiple target codes are required to complete mapping (scenario = 1) or multiple target codes are not required (scenario = 0)<br>
 <i>Choice list</i>: Used on conjuction with the combination flag to direct alternatives when mappings are one-to-many. If a single combination mapping exists: choice list = 1, if more than one combination mapping exists: choice list = 2, if no combination mapping exists: choice list = 0 <br>
