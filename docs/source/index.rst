@@ -12,17 +12,17 @@ Map between ICD-9-CM and ICD-10-CM
  
 Filter by map type
  - Approximate: 
-     - Imperfect correspondence (approximate = 1)
-     - Perfect correspondence (approximate = 0)
+     - Imperfect correspondence: approximate = 1
+     - Perfect correspondence: approximate = 0
  - No Map: 
-     - No acceptable GEMs mapping exists (no map = 1)
-     - One or greater mappings exist (no map = 0)
+     - No acceptable GEMs mapping exists: no map = 1
+     - One or greater mappings exist: no map = 0
  - Combination: 
-     - Mapping is one-to-many (combination = 1) 
-     - One-to-one (combination = 0)
+     - Mapping is one-to-many: combination = 1
+     - One-to-one: combination = 0
  - Scenario: 
-     - Multiple target codes are required to complete mapping (scenario = 1)
-     - Multiple target codes are not required (scenario = 0)
+     - Multiple target codes are required to complete mapping: scenario = 1
+     - Multiple target codes are not required: scenario = 0
  - Choice list: Used with the combination flag to direct alternatives when mappings are one-to-many
      - A single combination mapping exists: choice list = 1
      - More than one combination mapping exists: choice list = 2
