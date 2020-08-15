@@ -3,7 +3,7 @@ import os
 
 pd.set_option('display.max_colwidth', 255)
 
-GEMS_PATH = "../../../data/raw_data/gems/"
+GEMS_PATH = "../data/raw_data/gems/"
 
 def set_map_type(df: "pandas.dataframe", flag: str):
     
