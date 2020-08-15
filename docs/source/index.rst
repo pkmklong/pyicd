@@ -6,9 +6,9 @@ About GEMs
 ^^^^^^^^^^
 General Equivalency Maps (GEMs) support the interoperability between ICD-9 and ICD-10 codebases and are maintained by the Centers for Medicare and Medicaid Services (CMS). Multiple mapping types may occur including one-to-one and one-to-many. GEMs provide various flags to further characterize these mapping relationships.
 
-Convert between ICD-9-CM and ICD-10-CM
- - Forward mapping: ICD-9 to ICD-10 codes.
- - Backward mapping: ICD-10 to ICD-9 codes.
+Map between ICD-9-CM and ICD-10-CM
+ - Forward mapping: ICD-9 to ICD-10 codes
+ - Backward mapping: ICD-10 to ICD-9 codes
  
 Filter by map type
  - Approximate: 
@@ -19,11 +19,11 @@ Filter by map type
      - One or greater mappings exist (no map = 0)
  - Combination: 
      - Mapping is one-to-many (combination = 1) 
-     - One-to-one (combination = 0). 
+     - One-to-one (combination = 0)
  - Scenario: 
      - Multiple target codes are required to complete mapping (scenario = 1)
      - Multiple target codes are not required (scenario = 0)
- - Choice list: Used with the combination flag to direct alternatives when mappings are one-to-many. 
+ - Choice list: Used with the combination flag to direct alternatives when mappings are one-to-many
      - A single combination mapping exists: choice list = 1
      - More than one combination mapping exists: choice list = 2
      - No combination mapping exists: choice list = 0
