@@ -1,9 +1,12 @@
 import pandas as pd
 import os
+import pkg_resources
 
 pd.set_option('display.max_colwidth', 255)
 
-GEMS_PATH = "../data/"
+ICD9_PATH = str(pkg_resources.resource_filename(__name__, "icd9_gems_lookup.csv"))
+ICD10_PATH = str(pkg_resources.resource_filename(__name__, "icd10_gems_lookup.csv"))
+
 
 def set_map_type(df: "pandas.dataframe", flag: str):
     
@@ -13,7 +16,7 @@ def set_map_type(df: "pandas.dataframe", flag: str):
 def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
     print(os.getcwd())
 
-    df = pd.read_csv(os.path.join(GEMS_PATH, "icd9_gems_lookup.csv"))
+    df = pd.read_csv(ICD9_PATH)
     
     if flag:
         df = set_map_type(df, flag)
@@ -38,7 +41,7 @@ def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
 
 def icd10_to_icd9(icd_code: str, flag: str = None, show_flags: bool = False):
     
-    df = pd.read_csv(os.path.join(GEMS_PATH, "icd10_gems_lookup.csv"))
+    df = pd.read_csv(ICD10_PATH)
     
     if flag:
         df = set_map_type(df, flag)
@@ -62,7 +65,7 @@ def icd10_to_icd9(icd_code: str, flag: str = None, show_flags: bool = False):
 
 def search_icd10(search_term: str, flag: str = None,):
 
-    df = pd.read_csv(os.path.join(GEMS_PATH, "icd9_gems_lookup.csv"))
+    df = pd.read_csv(ICD9_PATH)
     
     if flag:
         df = set_map_type(df, flag)
@@ -80,7 +83,7 @@ def search_icd10(search_term: str, flag: str = None,):
 
 def search_icd9(search_term: str, flag: str = None):
 
-    df = pd.read_csv("icd10_gems_lookup.csv")
+    df = pd.read_csv(ICD10_PATH)
     
     if flag:
         df = set_map_type(df, flag)
