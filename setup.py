@@ -13,7 +13,8 @@ setup(name='pyicd',
       'pyicd.data_utils',
       'pyicd.utils'],
       package_dir = {'': 'src'},
-      scripts=['src/pyicd/process_data.py']
+      scripts=['src/pyicd/process_data.py'],
+      include_package_data=True
       #entry_points = {
        # 'console_scripts': ['pyicd-pull-gems=process_data:main']
         #},

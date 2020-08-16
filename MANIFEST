@@ -4,3 +4,4 @@ setup.py
 src/pyicd/__init__.py
 src/pyicd/process_data.py
 src/pyicd/runner.py
+src/pyicd/utils/*.csv
