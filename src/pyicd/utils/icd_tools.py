@@ -8,8 +8,8 @@ import pkg_resources
 
 pd.set_option('display.max_colwidth', 255)
 
-ICD9_PATH = pkg_resources.resource_string(__name__, "icd9_gems_lookup.csv") # "src/pyicd/utils/icd9_gems_look 
-ICD10_PATH = pkg_resources.resource_string(__name__,"icd10_gems_lookup.csv") 
+ICD9_PATH = pkg_resources.resource_filename("pyicd","utils/icd9_gems_lookup.csv") # "src/pyicd/utils/icd9_gems_look 
+ICD10_PATH = pkg_resources.resource_filename("pyicd", "utils/icd10_gems_lookup.csv") 
 
 def set_map_type(df: "pandas.dataframe", flag: str):
     
