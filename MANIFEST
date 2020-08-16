@@ -12,4 +12,3 @@ src/pyicd/path_utils/path_variables.py
 src/pyicd/utils/icd10_gems_lookup.csv
 src/pyicd/utils/icd9_gems_lookup.csv
 src/pyicd/utils/icd_tools.py
-
