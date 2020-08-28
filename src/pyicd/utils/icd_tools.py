@@ -1,15 +1,11 @@
 import pandas as pd
 import os
-
-#ICD9_PATH =  "icd9_gems_lookup.csv" # "src/pyicd/utils/icd9_gems_lookup.csv" 
-#ICD10_PATH =  "icd10_gems_lookup.csv" # "src/pyicd//utils/icd10_gems_lookup.csv"  
-
 import pkg_resources
-
 pd.set_option('display.max_colwidth', 255)
 
-ICD9_PATH = pkg_resources.resource_filename("pyicd","utils/icd9_gems_lookup.csv") # "src/pyicd/utils/icd9_gems_look 
+ICD9_PATH = pkg_resources.resource_filename("pyicd","utils/icd9_gems_lookup.csv") 
 ICD10_PATH = pkg_resources.resource_filename("pyicd", "utils/icd10_gems_lookup.csv") 
+
 
 def set_map_type(df: "pandas.dataframe", flag: str):
     
@@ -17,8 +13,7 @@ def set_map_type(df: "pandas.dataframe", flag: str):
     
     
 def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
-    print(os.getcwd())
-
+    
     df = pd.read_csv(ICD9_PATH)
     
     if flag:
@@ -26,7 +21,7 @@ def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
     
     df["description"] = df["description"].str.upper()
     
-    df = df[df["source"] == icd_code].loc[:,["source",
+    df = df[df["source"] == icd_code].loc[:, ["source",
                                             "icd10",
                                             "description",
                                             "approximate",
@@ -51,7 +46,7 @@ def icd10_to_icd9(icd_code: str, flag: str = None, show_flags: bool = False):
         
     df["description"] = df["description"].str.upper()  
     
-    df = df[df["source"] == icd_code].loc[:,["source",
+    df = df[df["source"] == icd_code].loc[:, ["source",
                                             "icd9",
                                             "description",
                                             "approximate",
