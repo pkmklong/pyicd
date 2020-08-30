@@ -68,6 +68,11 @@ Search by clinical term::
     I4891    UNSPECIFIED ATRIAL FIBRILLATION
     I4901           VENTRICULAR FIBRILLATION
 
+
+... note
+    The author of this library is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Centers for Medicare and Medicaid Services (CMS), or any of its subsidiaries or its affiliates.
+
+
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
