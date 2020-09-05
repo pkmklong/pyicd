@@ -14,11 +14,11 @@ def test_split_flags(test_input, expected):
     
 def test_format_flags():
     df_input = pd.DataFrame({"flags":["10101"]})
-    df_expected = pd.DataFrame({"approximate":[1],
-                                "no map":[0], 
-                                "combination":[1],
-                                "scenario":[0],
-                                "choice list":[1]})
+    df_expected = pd.DataFrame({"approximate":["1"],
+                                "no map":["0"], 
+                                "combination":["1"],
+                                "scenario":["0"],
+                                "choice list":["1"]})
     df_result = form.format_flags(df_input)
     pd.testing.assert_frame_equal(df_result, df_expected)
 
