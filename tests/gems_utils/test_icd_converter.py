@@ -6,7 +6,7 @@ from pyicd.utils.icd_tools import icd9_to_icd10
 
 
 #@pytest.mark.skip(reason="not yet implemented.")
-def test_icd9_to_icd10(icd_code: str):
+def test_icd9_to_icd10():
     
     df_result = icd9_to_icd10(icd_code = "59972", flag = "approximate")
     df_expected = pd.DataFrame(
