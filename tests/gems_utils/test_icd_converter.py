@@ -2,6 +2,7 @@
 This run  pytest for  gems converter utils.
 """
 import pytest
+import pandas as pd
 from pyicd.utils.icd_tools import icd9_to_icd10
 
 
