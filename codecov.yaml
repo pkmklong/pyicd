@@ -4,3 +4,4 @@ codecov:
   
 ignore:
   - "src/pyicd/path_utils/path_variables.py"
+  - "setup.py"
