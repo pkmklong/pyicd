@@ -21,7 +21,10 @@ def test_icd9_to_icd10():
                           ]
         }
     )
-    pd.testing.assert_frame_equal(df_result, df_expected)
+    pd.testing.assert_frame_equal( 
+        df_result.loc[:,"source","icd10"]],
+        df_expected.loc[:,"source","icd10"]]
+    )
        
 
 @pytest.mark.skip(reason="not yet implemented.")
