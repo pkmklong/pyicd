@@ -15,9 +15,9 @@ def test_icd9_to_icd10():
         {
             "source":["59972", "59972", "59972"],
             "icd10":["R311", "R3121", "R3129"],
-            "description":["BENIGN ESSENTIAL MICROSCOPIC HEMATURIA",
-                           "ASYMPTOMATIC MICROSCOPIC HEMATURIA",
-                           "OTHER MICROSCOPIC HEMATURIA"
+            "description":[ "BENIGN ESSENTIAL MICROSCOPIC HEMATURIA",
+                            "ASYMPTOMATIC MICROSCOPIC HEMATURIA",
+                            "OTHER MICROSCOPIC HEMATURIA"
                           ]
         }
     )
