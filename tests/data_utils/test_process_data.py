@@ -19,7 +19,7 @@ def test_format_flags():
                                 "combination":[1],
                                 "scenario":[0],
                                 "choice list":[1]})
-    df_result = form.format_flags(df)
+    df_result = form.format_flags(df_input)
     pd.testing.assert_frame_equal(df_result, df_expected)
 
 
