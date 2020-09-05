@@ -1,3 +1,5 @@
+"""Utilities package to support ICD-9/10 GEMs"""
+
 import pandas as pd
 import os
 import pkg_resources
@@ -8,12 +10,13 @@ ICD9_PATH = pkg_resources.resource_filename("pyicd", "utils/icd9_gems_lookup.csv
 ICD10_PATH = pkg_resources.resource_filename("pyicd", "utils/icd10_gems_lookup.csv")
 
 
-def set_map_type(df: "pandas.dataframe", flag: str):
+def set_map_type(df: pd.DataFrame, flag: str) -> pd.DataFrame:
 
     return df[df[flag] != 0]
 
 
-def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
+def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False
+                 ) -> pd.DataFrame:
 
     df = pd.read_csv(ICD9_PATH)
 
@@ -44,7 +47,8 @@ def icd9_to_icd10(icd_code: str, flag: str = None, show_flags: bool = False):
     return df
 
 
-def icd10_to_icd9(icd_code: str, flag: str = None, show_flags: bool = False):
+def icd10_to_icd9(icd_code: str, flag: str = None, show_flags: bool = False
+                 ) -> pd.DataFrame:
 
     df = pd.read_csv(ICD10_PATH)
 
@@ -78,7 +82,7 @@ def icd10_to_icd9(icd_code: str, flag: str = None, show_flags: bool = False):
 def search_icd10(
     search_term: str,
     flag: str = None,
-):
+) -> pd.DataFrame:
 
     df = pd.read_csv(ICD9_PATH)
 
@@ -107,7 +111,7 @@ def search_icd10(
     return df
 
 
-def search_icd9(search_term: str, flag: str = None):
+def search_icd9(search_term: str, flag: str = None) -> pd.DataFrame:
 
     df = pd.read_csv(ICD10_PATH)
 
