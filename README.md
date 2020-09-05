@@ -1,5 +1,5 @@
-[![Documentation Status](https://readthedocs.org/projects/docs/badge/?version=latest)](https://pyicd.readthedocs.io/en/latest/) Check out the [pyicd documentation on ReadTheDocs](https://pyicd.readthedocs.io/en/latest/).<br>
-[![codecov](https://codecov.io/gh/pkmklong/pyicd/branch/master/graph/badge.svg)](https://codecov.io/gh/pkmklong/pyicd)
+[![Documentation Status](https://readthedocs.org/projects/docs/badge/?version=latest)](https://pyicd.readthedocs.io/en/latest/) Check out the [pyicd documentation on ReadTheDocs](https://pyicd.readthedocs.io/en/latest/).
+ [![codecov](https://codecov.io/gh/pkmklong/pyicd/branch/master/graph/badge.svg)](https://codecov.io/gh/pkmklong/pyicd)
 
 # pyicd (WIP)
 A python package with basic utilities for ICD-9-CM and ICD-10-CM codes.
