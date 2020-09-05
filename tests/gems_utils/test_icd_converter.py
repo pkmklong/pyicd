@@ -10,7 +10,7 @@ from pyicd.utils.icd_tools import icd9_to_icd10
 def test_icd9_to_icd10():
     
     df_result = icd9_to_icd10(icd_code = "59972", flag = "approximate"). \
-    reset_index()
+    reset_index(drop=True)
     df_expected = pd.DataFrame(
         {
             "source":["59972", "59972", "59972"],
