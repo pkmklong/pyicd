@@ -16,8 +16,11 @@ setup(name='pyicd',
       'pyicd.utils'],
       package_dir = {'': 'src'},
       scripts=['src/pyicd/process_data.py'],
-      include_package_data=True
+      include_package_data=True,
       #entry_points = {
        # 'console_scripts': ['pyicd-pull-gems=process_data:main']
         #},
+      install_requires=[
+          'pandas',
+      ],
         )
