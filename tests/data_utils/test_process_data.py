@@ -1,16 +1,7 @@
 import pytest
 import pandas as pd
+from pyicd.data_utils import format_data as form
 
-debug = True
-print(__name__)
-try:
-    # Trying to find module in the parent package
-    from . import pyicd.data_utils import format_data as form
-    print(pyicd.debug)
-except ImportError:
-    print('Relative import failed')
-
-#from pyicd.data_utils import format_data as form
 
 @pytest.mark.parametrize("test_input, expected",
 [(1, "0,0,0,0,1"), 
