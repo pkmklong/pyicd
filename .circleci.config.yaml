@@ -1,0 +1,41 @@
+# .circleci/config.yml
+defaults: &defaults
+  docker:
+    - image: python:3.8
+  working_directory: ~/project
+  
+version: 2.1
+jobs:
+    build:
+      <<: *defaults
+      steps:
+        - checkout  # checkout source code to working directory
+        - run:
+            command: |
+              python -m venv /root/.env
+              source /root/.env/bin/activate
+              python -m pip install pytest pytest-cov
+              python setup.py install
+        - save_cache:
+             key: "build_deps"
+             paths: 
+                - /root/.env/lib/python3.8/site-packages
+                - /root/.env
+    test:          
+      <<: *defaults
+      steps:
+        - checkout  # checkout source code to working directory
+        - restore_cache:
+             keys:
+               - "build_deps"
+        - run:
+            command: |
+              source /root/.env/bin/activate
+              pytest .                       
+workflows:
+  integration:
+    jobs:
+      - build
+      - test:
+          requires:
+              - build
