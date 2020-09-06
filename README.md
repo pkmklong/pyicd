@@ -31,6 +31,11 @@ General Equivalency Maps (GEMs) support the interoperability between ICD-9 and I
 
 ## Examples
 
+<i>Installation</i>
+
+    $ python -m pip install git+https://github.com/pkmklong/pyicd.git
+
+
 <i>Forward mapping</i>
 
 ```python
