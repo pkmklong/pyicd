@@ -72,6 +72,11 @@ Search by clinical term::
 .. note::
     The author of this library is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Centers for Medicare and Medicaid Services (CMS), or any of its subsidiaries or its affiliates.
 
+.. image:: https://codecov.io/gh/pkmklong/pyicd/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/pkmklong/pycr
+  
+.. image:: https://circleci.com/gh/pkmklong/pyicd.svg?style=shield
+    :target: https://app.circleci.com/pipelines/github/pkmklong
 
 .. toctree::
    :maxdepth: 3
